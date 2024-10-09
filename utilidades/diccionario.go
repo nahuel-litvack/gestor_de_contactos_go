@@ -5,7 +5,7 @@ type Dictionary[K comparable, V any] struct {
 	dict map[K]V
 }
 
-// Funcion 'NewDictionar' crea una nueva instancia del struct Dictionary
+// Funcion 'NewDictionary' crea una nueva instancia del struct Dictionary
 func NewDictionary[K comparable, V any]() *Dictionary[K, V] {
 	return &Dictionary[K, V]{dict: make(map[K]V)}
 }
@@ -44,7 +44,7 @@ func (d *Dictionary[K, V]) Size() int {
 	return len(d.dict)
 }
 
-// Fucnion 'Keys' devuelve un slice con todas las claves del diccionario
+// Funcion 'Keys' devuelve un slice con todas las claves del diccionario
 func (d *Dictionary[K, V]) Keys() []K {
 	// Se decalara una variable que almacena un slice con las claves
 	keys := make([]K, 0, len(d.dict))
